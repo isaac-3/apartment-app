@@ -1,0 +1,10 @@
+<h1>Apartment Details</h1>
+<%=@apartment.address%><br>
+<h2>All tenants</h2>
+<%@tenants.each do |tenant| %>
+    <%=tenant.name%><br>
+    <%end%>
+<form method="POST" actoin="/apartment/<%=@apartment.id%>">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="delete">
+</form>

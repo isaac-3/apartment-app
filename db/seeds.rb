@@ -1,3 +1,4 @@
+require "pry"
 Apartment.destroy_all
 Tenant.destroy_all
 

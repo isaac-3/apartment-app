@@ -1,0 +1,16 @@
+<form method="POST" action='/tenant/<%= @tenant.id%>'>
+<input type="hidden" name="_method" value="PATCH"/>
+name: <input type="text" name='new_name'/>
+<select name="new_address">
+<%@apartments.each do |apartment|%>
+    <option value='<%=apartment.id%>'><%=apartment.address%></option> 
+    <%end%>
+</select>
+<input type='submit'/>
+</form>
+
+
+<form method="POST" action='/tenant/<%= @tenant.id%>'>
+<input type="hidden" name="_method" value="DELETE"/>
+<input type='submit' value="delete"/>
+</form>
